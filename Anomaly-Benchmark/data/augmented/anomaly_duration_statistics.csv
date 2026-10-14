@@ -1,0 +1,12 @@
+﻿origin,anomaly_type,event_count,duration_samples_min,duration_samples_median,duration_samples_max,cumulative_duration_samples,labeled_point_count
+natural_human_reviewed,short_burst,10,13,18.5,29,205,205
+natural_human_reviewed,pulse,24,2,6.0,16,167,167
+natural_human_reviewed,strong_noise,1,3,3.0,3,3,3
+synthetic_procedural_ground_truth,step,20,129,295.5,589,6309,6588
+synthetic_procedural_ground_truth,dropout_zero,20,64,230.5,393,4546,4546
+synthetic_procedural_ground_truth,flatline,20,101,428.0,732,8272,8272
+synthetic_procedural_ground_truth,drift,20,239,1075.0,1500,20801,24016
+synthetic_procedural_ground_truth,saturation_clipping,20,106,312.0,499,6293,6293
+synthetic_procedural_ground_truth,gain_jump,20,115,348.5,750,7710,7710
+synthetic_procedural_ground_truth,high_frequency_jitter,20,64,252.0,494,5235,7436
+synthetic_procedural_ground_truth,strong_noise,25,200,702.0,1000,15753,15753

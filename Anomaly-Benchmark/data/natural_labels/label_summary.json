@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "release_status": "human_reviewed_final",
+  "reviewer_count": 2,
+  "review_protocol": "Two domain experts manually reviewed intervals and reconciled disagreements to final consensus labels.",
+  "source_filename": "20201118093500.00000_200.csv",
+  "source_sha256": "bd807a59ff60d307b2a94801ab15d9f97f7ff9d40ceceb184e6feb897998fdc7",
+  "samples": 60000,
+  "traces": 200,
+  "sampling_rate_hz": 100.0,
+  "duration_seconds": 600.0,
+  "total_points": 12000000,
+  "normal_points": 11999625,
+  "anomaly_points": 375,
+  "anomaly_fraction": 3.125e-05,
+  "candidate_count": 48,
+  "accepted_candidate_count": 34,
+  "rejected_candidate_count": 14,
+  "excluded_duplicate_follower_trace_count": 5,
+  "excluded_duplicate_follower_traces": [
+    196,
+    197,
+    198,
+    199,
+    200
+  ],
+  "duplicate_trace_pairs": [
+    [
+      101,
+      196
+    ],
+    [
+      102,
+      197
+    ],
+    [
+      103,
+      198
+    ],
+    [
+      104,
+      199
+    ],
+    [
+      105,
+      200
+    ]
+  ],
+  "propagated_duplicate_interval_count": 1,
+  "propagated_duplicate_anomaly_points": 29,
+  "anomaly_interval_count": 35,
+  "point_label_npz_sha256": "566f11d03d56a0de348bb85e1f3eb07f01f26d293ed7d8ab73c32bc4b71adb0e"
+}

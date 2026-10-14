@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "indexing_convention": "zero-based; start inclusive; end exclusive",
+  "total_samples": 60000,
+  "dtype_in_npz": "int32",
+  "splits": {
+    "train": {
+      "start": 0,
+      "end_exclusive": 32000,
+      "sample_count": 32000
+    },
+    "buffer_1": {
+      "start": 32000,
+      "end_exclusive": 36096,
+      "sample_count": 4096
+    },
+    "calibration": {
+      "start": 36096,
+      "end_exclusive": 44192,
+      "sample_count": 8096
+    },
+    "buffer_2": {
+      "start": 44192,
+      "end_exclusive": 48288,
+      "sample_count": 4096
+    },
+    "test": {
+      "start": 48288,
+      "end_exclusive": 60000,
+      "sample_count": 11712
+    }
+  },
+  "coverage": "The five arrays are mutually disjoint and their union is exactly [0, 60000).",
+  "recommended_evaluation_policy": "Use train for fitting, calibration for threshold/model selection, test once for final evaluation, and exclude both buffers from fitting and evaluation."
+}

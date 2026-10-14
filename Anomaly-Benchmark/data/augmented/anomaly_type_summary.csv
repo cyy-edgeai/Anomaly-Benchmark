@@ -1,0 +1,10 @@
+﻿class_id,label,origin,event_count,point_count,affected_trace_count,duration_samples_min,duration_samples_median,duration_samples_max
+1,natural_reviewed_anomaly,natural_human_reviewed,35,375,29,2.0,9.0,29.0
+2,step,synthetic_procedural_ground_truth,20,6588,21,129.0,295.5,589.0
+3,dropout_zero,synthetic_procedural_ground_truth,20,4546,19,64.0,230.5,393.0
+4,flatline,synthetic_procedural_ground_truth,20,8272,20,101.0,428.0,732.0
+5,drift,synthetic_procedural_ground_truth,20,24016,21,239.0,1075.0,1500.0
+6,saturation_clipping,synthetic_procedural_ground_truth,20,6293,19,106.0,312.0,499.0
+7,gain_jump,synthetic_procedural_ground_truth,20,7710,20,115.0,348.5,750.0
+8,high_frequency_jitter,synthetic_procedural_ground_truth,20,7436,23,64.0,252.0,494.0
+9,strong_noise,synthetic_procedural_ground_truth,25,15753,25,200.0,702.0,1000.0

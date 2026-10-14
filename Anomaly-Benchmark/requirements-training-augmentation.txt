@@ -1,0 +1,4 @@
+# Optional runtime for injection/training_augmentation.py.
+# The reported experiments used PyTorch 1.13; use that environment for strict
+# version-level replay. The extracted logic is compatible with current PyTorch.
+torch>=1.13

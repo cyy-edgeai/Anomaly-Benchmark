@@ -1,0 +1,16 @@
+* text=auto eol=lf
+data/raw/*.csv filter=lfs diff=lfs merge=lfs -text
+data/natural_labels/*.npz filter=lfs diff=lfs merge=lfs -text
+data/augmented/*.npz filter=lfs diff=lfs merge=lfs -text
+data/splits/*.npz filter=lfs diff=lfs merge=lfs -text
+
+# These frozen data artifacts are covered by byte-level SHA-256 manifests.
+# Disable newline conversion so a fresh clone reproduces the published hashes.
+data/augmented/*.csv -text
+data/augmented/*.json -text
+data/augmented/*.md -text
+data/natural_labels/*.csv -text
+data/natural_labels/*.json -text
+data/natural_labels/*.md -text
+data/splits/*.csv -text
+*.png binary

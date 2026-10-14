@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "random_seed": 20260913,
+  "source_csv": "../data/raw/seismic_200.csv",
+  "source_sha256": "bd807a59ff60d307b2a94801ab15d9f97f7ff9d40ceceb184e6feb897998fdc7",
+  "natural_labels_npz": "../data/natural_labels/point_labels.npz",
+  "natural_intervals_csv": "../data/natural_labels/anomaly_intervals.csv",
+  "protected_events_csv": "../data/natural_labels/protected_coherent_events.csv",
+  "sampling_rate_hz": 100.0,
+  "expected_shape": [60000, 200],
+  "class_map": {
+    "0": "normal",
+    "1": "natural_reviewed_anomaly",
+    "2": "step",
+    "3": "dropout_zero",
+    "4": "flatline",
+    "5": "drift",
+    "6": "saturation_clipping",
+    "7": "gain_jump",
+    "8": "high_frequency_jitter",
+    "9": "strong_noise"
+  },
+  "excluded_trace_ids_1_based": [101, 102, 103, 104, 105, 196, 197, 198, 199, 200],
+  "duplicate_trace_groups_1_based": [
+    [101, 196],
+    [102, 197],
+    [103, 198],
+    [104, 199],
+    [105, 200]
+  ],
+  "natural_label_guard_samples": 32,
+  "synthetic_event_guard_samples": 64,
+  "activity_candidate_pool": 48,
+  "split_ranges": {
+    "train": [0, 32000],
+    "buffer_1": [32000, 36096],
+    "calibration": [36096, 44192],
+    "buffer_2": [44192, 48288],
+    "test": [48288, 60000]
+  },
+  "frozen_injection_sampling_ranges": {
+    "train": [0, 31980],
+    "calibration": [36090, 44190],
+    "test": [48300, 60000]
+  },
+  "events_per_type_by_split": {
+    "train": 10,
+    "calibration": 4,
+    "test": 6
+  },
+  "protected_physical_event_policy": "allowed_as_real_background_and_recorded_in_event_catalog",
+  "anomaly_types": {
+    "step": {
+      "class_id": 2,
+      "duration_samples": [100, 600],
+      "severity_sigma": [3.0, 8.0],
+      "trace_count_values": [1, 2],
+      "trace_count_probabilities": [0.9, 0.1]
+    },
+    "dropout_zero": {
+      "class_id": 3,
+      "duration_samples": [40, 400],
+      "trace_count_values": [1],
+      "trace_count_probabilities": [1.0]
+    },
+    "flatline": {
+      "class_id": 4,
+      "duration_samples": [80, 800],
+      "trace_count_values": [1],
+      "trace_count_probabilities": [1.0]
+    },
+    "drift": {
+      "class_id": 5,
+      "duration_samples": [200, 1500],
+      "severity_sigma": [2.0, 7.0],
+      "trace_count_values": [1, 2],
+      "trace_count_probabilities": [0.9, 0.1]
+    },
+    "saturation_clipping": {
+      "class_id": 6,
+      "duration_samples": [50, 500],
+      "clip_quantile": [0.5, 0.75],
+      "trace_count_values": [1],
+      "trace_count_probabilities": [1.0]
+    },
+    "gain_jump": {
+      "class_id": 7,
+      "duration_samples": [100, 800],
+      "gain_high": [1.8, 4.0],
+      "gain_low": [0.18, 0.55],
+      "high_gain_probability": 0.7,
+      "trace_count_values": [1],
+      "trace_count_probabilities": [1.0]
+    },
+    "high_frequency_jitter": {
+      "class_id": 8,
+      "duration_samples": [50, 500],
+      "severity_sigma": [1.5, 5.0],
+      "normalized_frequency_cycles_per_sample": [0.2, 0.45],
+      "trace_count_values": [1, 2, 3],
+      "trace_count_probabilities": [0.8, 0.15, 0.05]
+    },
+    "strong_noise": {
+      "class_id": 9,
+      "duration_samples": [200, 1000],
+      "events_per_split": {"train": 13, "calibration": 5, "test": 7},
+      "noise_to_background_rms_ratio": [2.0, 4.0],
+      "ar1_coefficient": [0.15, 0.65],
+      "white_noise_weight": [0.45, 0.8],
+      "taper_fraction": 0.05,
+      "trace_count_values": [1],
+      "trace_count_probabilities": [1.0]
+    }
+  }
+}

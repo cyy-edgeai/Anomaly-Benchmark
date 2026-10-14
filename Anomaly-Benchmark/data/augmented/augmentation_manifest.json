@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "release_type": "mixed_natural_and_synthetic_anomaly_benchmark",
+  "source_filename": "seismic_200.csv",
+  "source_relative_path": "../data/raw/seismic_200.csv",
+  "source_sha256": "bd807a59ff60d307b2a94801ab15d9f97f7ff9d40ceceb184e6feb897998fdc7",
+  "source_data_copied_to_datayu": false,
+  "shape_samples_by_traces": [
+    60000,
+    200
+  ],
+  "sampling_rate_hz": 100.0,
+  "duration_seconds": 600.0,
+  "random_seed": 20260913,
+  "exact_experiment_split_ranges": {
+    "train": [
+      0,
+      32000
+    ],
+    "buffer_1": [
+      32000,
+      36096
+    ],
+    "calibration": [
+      36096,
+      44192
+    ],
+    "buffer_2": [
+      44192,
+      48288
+    ],
+    "test": [
+      48288,
+      60000
+    ]
+  },
+  "frozen_injection_sampling_ranges": {
+    "train": [
+      0,
+      31980
+    ],
+    "calibration": [
+      36090,
+      44190
+    ],
+    "test": [
+      48300,
+      60000
+    ]
+  },
+  "config_sha256": "2ef6e0b6032fc05e9ea1d9dea78ac8c1bb704451ef277c63181baaa5b28470d0",
+  "program_sha256": "9f7767f767620bed98d0aa43dc0c7761eef4bbddee1fda7caf36234bac2033e9",
+  "class_map": {
+    "0": "normal",
+    "1": "natural_reviewed_anomaly",
+    "2": "step",
+    "3": "dropout_zero",
+    "4": "flatline",
+    "5": "drift",
+    "6": "saturation_clipping",
+    "7": "gain_jump",
+    "8": "high_frequency_jitter",
+    "9": "strong_noise"
+  },
+  "excluded_duplicate_trace_ids_1_based": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    196,
+    197,
+    198,
+    199,
+    200
+  ],
+  "quality_status": "PASS",
+  "output_files": {
+    "augmented_waveforms.npz": {
+      "sha256": "c828d1931901b029842637771388f756d848853cc45333ef656e86b6ab9b33d4",
+      "size_bytes": 34507401
+    },
+    "combined_labels.npz": {
+      "sha256": "73901b1b5c504761f7c3023efe7f25d9c11a6e90888e31cbe8e9fdf799254cf8",
+      "size_bytes": 250842
+    },
+    "synthetic_events.csv": {
+      "sha256": "d26cf36adf855a62d5c8b61873156c132e376ec45e46c35971988a96ea2ed3e1",
+      "size_bytes": 63455
+    },
+    "combined_events.csv": {
+      "sha256": "181d888ecb7b9b7cd77675cacb25d150455e051035fb5f7c0c57ae8b4f637461",
+      "size_bytes": 67205
+    },
+    "split_manifest.csv": {
+      "sha256": "4f60109122426739bdec5cbce4c3d53f6e863e3b64f1771581886e860b9672d9",
+      "size_bytes": 742
+    },
+    "anomaly_type_summary.csv": {
+      "sha256": "049eb54c66054f796c60c846ecba3b05d7e35d7932a342a57c9b002c35900489",
+      "size_bytes": 840
+    },
+    "combined_binary_labels.csv.gz": {
+      "sha256": "78d7478aa0aba34cf5bf8894d0d5b44396ea9ab97c3a6ba66565544282633635",
+      "size_bytes": 376742
+    },
+    "quality_audit.json": {
+      "sha256": "420a9b310f58eb050f66c747c7066a70bec0e4bf216484d6c9234e9ba484ee1b",
+      "size_bytes": 29222
+    },
+    "quality_report.md": {
+      "sha256": "674f367d02dc5fdc90c557b2759407730bec3d1c46e3b74656c27badf3806d94",
+      "size_bytes": 2404
+    },
+    "anomaly_duration_statistics.csv": {
+      "sha256": "c5c33463f0f11e4c4f861daeb84f5259814d695c386f2ed06eaa1e158e1f741b",
+      "size_bytes": 908
+    },
+    "anomaly_split_statistics.csv": {
+      "sha256": "f2c70837fc05d5a9a006bf7b6c2e61ec494f9eaa59c4a4e483af102077d18575",
+      "size_bytes": 2459
+    },
+    "all_anomaly_overview.png": {
+      "sha256": "cd5338f88ed6e4ec027274dadc0b0948671b89b59a113d0f1f46345de3c867c3",
+      "size_bytes": 11182258
+    }
+  }
+}

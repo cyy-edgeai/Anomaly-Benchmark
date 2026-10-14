@@ -1,0 +1,1112 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "checks": {
+    "source_hash_unchanged": true,
+    "shape_preserved": true,
+    "finite_augmented_values": true,
+    "natural_and_synthetic_do_not_overlap": true,
+    "natural_binary_labels_preserved": true,
+    "natural_multiclass_labels_preserved_as_class_1": true,
+    "outside_synthetic_intervals_bitwise_unchanged": true,
+    "synthetic_labels_reconstruct_from_catalog": true,
+    "synthetic_events_do_not_overlap_per_point": true,
+    "excluded_duplicate_groups_not_injected": true,
+    "duplicate_waveform_pairs_remain_bitwise_equal": true,
+    "duplicate_label_pairs_remain_equal": true,
+    "buffer_splits_not_injected": true,
+    "event_counts_match_configuration": true,
+    "all_phenotype_checks_pass": true,
+    "class_ids_within_taxonomy": true
+  },
+  "counts": {
+    "natural_labeled_points": 375,
+    "synthetic_labeled_points": 80614,
+    "combined_labeled_points": 80989,
+    "synthetic_events": 165,
+    "synthetic_events_by_type": {
+      "step": 20,
+      "dropout_zero": 20,
+      "flatline": 20,
+      "drift": 20,
+      "saturation_clipping": 20,
+      "gain_jump": 20,
+      "high_frequency_jitter": 20,
+      "strong_noise": 25
+    },
+    "synthetic_events_by_split": {
+      "train": 83,
+      "calibration": 33,
+      "test": 49
+    }
+  },
+  "expected_event_counts_by_type_and_split": {
+    "step:train": 10,
+    "step:calibration": 4,
+    "step:test": 6,
+    "dropout_zero:train": 10,
+    "dropout_zero:calibration": 4,
+    "dropout_zero:test": 6,
+    "flatline:train": 10,
+    "flatline:calibration": 4,
+    "flatline:test": 6,
+    "drift:train": 10,
+    "drift:calibration": 4,
+    "drift:test": 6,
+    "saturation_clipping:train": 10,
+    "saturation_clipping:calibration": 4,
+    "saturation_clipping:test": 6,
+    "gain_jump:train": 10,
+    "gain_jump:calibration": 4,
+    "gain_jump:test": 6,
+    "high_frequency_jitter:train": 10,
+    "high_frequency_jitter:calibration": 4,
+    "high_frequency_jitter:test": 6,
+    "strong_noise:train": 13,
+    "strong_noise:calibration": 5,
+    "strong_noise:test": 7
+  },
+  "actual_event_counts_by_type_and_split": {
+    "step:train": 10,
+    "step:calibration": 4,
+    "step:test": 6,
+    "dropout_zero:train": 10,
+    "dropout_zero:calibration": 4,
+    "dropout_zero:test": 6,
+    "flatline:train": 10,
+    "flatline:calibration": 4,
+    "flatline:test": 6,
+    "drift:train": 10,
+    "drift:calibration": 4,
+    "drift:test": 6,
+    "saturation_clipping:train": 10,
+    "saturation_clipping:calibration": 4,
+    "saturation_clipping:test": 6,
+    "gain_jump:train": 10,
+    "gain_jump:calibration": 4,
+    "gain_jump:test": 6,
+    "high_frequency_jitter:train": 10,
+    "high_frequency_jitter:calibration": 4,
+    "high_frequency_jitter:test": 6,
+    "strong_noise:train": 13,
+    "strong_noise:calibration": 5,
+    "strong_noise:test": 7
+  },
+  "phenotype_event_checks": [
+    {
+      "event_id": "SYN0001",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 697797.125
+    },
+    {
+      "event_id": "SYN0002",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 544161.8014112905
+    },
+    {
+      "event_id": "SYN0003",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 184840.6134042716
+    },
+    {
+      "event_id": "SYN0004",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 204138.5430709605
+    },
+    {
+      "event_id": "SYN0005",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 434150.25028935185
+    },
+    {
+      "event_id": "SYN0006",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 85919.26582101255
+    },
+    {
+      "event_id": "SYN0007",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 98715.7663698051
+    },
+    {
+      "event_id": "SYN0008",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 183473.04599808675
+    },
+    {
+      "event_id": "SYN0009",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 135938.16792603722
+    },
+    {
+      "event_id": "SYN0010",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 103123.30601227593
+    },
+    {
+      "event_id": "SYN0011",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 122539.44244713703
+    },
+    {
+      "event_id": "SYN0012",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 141547.07818556202
+    },
+    {
+      "event_id": "SYN0013",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 167201.12580692492
+    },
+    {
+      "event_id": "SYN0014",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 228293.90625000003
+    },
+    {
+      "event_id": "SYN0015",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 493763.3575060617
+    },
+    {
+      "event_id": "SYN0016",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 666250.1777043194
+    },
+    {
+      "event_id": "SYN0017",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 592453.0082350608
+    },
+    {
+      "event_id": "SYN0018",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 1236166.5158390414
+    },
+    {
+      "event_id": "SYN0019",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 1144006.3847114756
+    },
+    {
+      "event_id": "SYN0020",
+      "anomaly_type": "step",
+      "passed": true,
+      "min_rms_delta": 1412259.8832282915
+    },
+    {
+      "event_id": "SYN0021",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0022",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0023",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0024",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0025",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0026",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0027",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0028",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0029",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0030",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0031",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0032",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0033",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0034",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0035",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0036",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0037",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0038",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0039",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0040",
+      "anomaly_type": "dropout_zero",
+      "passed": true,
+      "max_abs_value": 0.0
+    },
+    {
+      "event_id": "SYN0041",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0042",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0043",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0044",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0045",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0046",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0047",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0048",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0049",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0050",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0051",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0052",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0053",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0054",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0055",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0056",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0057",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0058",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0059",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0060",
+      "anomaly_type": "flatline",
+      "passed": true,
+      "max_peak_to_peak": 0.0
+    },
+    {
+      "event_id": "SYN0061",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.9982695347817653
+    },
+    {
+      "event_id": "SYN0062",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.9989615300696278
+    },
+    {
+      "event_id": "SYN0063",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.9968668680364199
+    },
+    {
+      "event_id": "SYN0064",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.9987177470051539
+    },
+    {
+      "event_id": "SYN0065",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.9999977125171993
+    },
+    {
+      "event_id": "SYN0066",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.9966087163351597
+    },
+    {
+      "event_id": "SYN0067",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.99610443842207
+    },
+    {
+      "event_id": "SYN0068",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.9991226415673103
+    },
+    {
+      "event_id": "SYN0069",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.996592212483846
+    },
+    {
+      "event_id": "SYN0070",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.9996496385564294
+    },
+    {
+      "event_id": "SYN0071",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.9976469800129909
+    },
+    {
+      "event_id": "SYN0072",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.9973446129199359
+    },
+    {
+      "event_id": "SYN0073",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.99882494264317
+    },
+    {
+      "event_id": "SYN0074",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.9963942536351336
+    },
+    {
+      "event_id": "SYN0075",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.9980509983345315
+    },
+    {
+      "event_id": "SYN0076",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.9997654301251356
+    },
+    {
+      "event_id": "SYN0077",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.9991021310268914
+    },
+    {
+      "event_id": "SYN0078",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.9960669950041374
+    },
+    {
+      "event_id": "SYN0079",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.9983347331499913
+    },
+    {
+      "event_id": "SYN0080",
+      "anomaly_type": "drift",
+      "passed": true,
+      "min_abs_time_correlation": 0.9993204568100071
+    },
+    {
+      "event_id": "SYN0081",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.7223650385604113
+    },
+    {
+      "event_id": "SYN0082",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.7026315789473684
+    },
+    {
+      "event_id": "SYN0083",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.5566037735849056
+    },
+    {
+      "event_id": "SYN0084",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.5528846153846154
+    },
+    {
+      "event_id": "SYN0085",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.6302816901408451
+    },
+    {
+      "event_id": "SYN0086",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.5512295081967213
+    },
+    {
+      "event_id": "SYN0087",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.6059113300492611
+    },
+    {
+      "event_id": "SYN0088",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.6428571428571429
+    },
+    {
+      "event_id": "SYN0089",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.5428571428571428
+    },
+    {
+      "event_id": "SYN0090",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.5619596541786743
+    },
+    {
+      "event_id": "SYN0091",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.5609756097560976
+    },
+    {
+      "event_id": "SYN0092",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.5981941309255079
+    },
+    {
+      "event_id": "SYN0093",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.5493827160493827
+    },
+    {
+      "event_id": "SYN0094",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.5316455696202531
+    },
+    {
+      "event_id": "SYN0095",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.5571142284569138
+    },
+    {
+      "event_id": "SYN0096",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.7052238805970149
+    },
+    {
+      "event_id": "SYN0097",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.5271966527196653
+    },
+    {
+      "event_id": "SYN0098",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.6619718309859155
+    },
+    {
+      "event_id": "SYN0099",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.7352941176470589
+    },
+    {
+      "event_id": "SYN0100",
+      "anomaly_type": "saturation_clipping",
+      "passed": true,
+      "max_unchanged_fraction": 0.680365296803653
+    },
+    {
+      "event_id": "SYN0101",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 90497.52815106239
+    },
+    {
+      "event_id": "SYN0102",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 41926.55768059288
+    },
+    {
+      "event_id": "SYN0103",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 84127.4673759872
+    },
+    {
+      "event_id": "SYN0104",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 73688.74427302007
+    },
+    {
+      "event_id": "SYN0105",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 1640477.1532990516
+    },
+    {
+      "event_id": "SYN0106",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 43933.1654357222
+    },
+    {
+      "event_id": "SYN0107",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 32820.623134761474
+    },
+    {
+      "event_id": "SYN0108",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 114293.99228716297
+    },
+    {
+      "event_id": "SYN0109",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 109140.57843466806
+    },
+    {
+      "event_id": "SYN0110",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 21846.65258634323
+    },
+    {
+      "event_id": "SYN0111",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 99833.29202917902
+    },
+    {
+      "event_id": "SYN0112",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 22132756.14216626
+    },
+    {
+      "event_id": "SYN0113",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 102217.62594858
+    },
+    {
+      "event_id": "SYN0114",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 46266129.469860405
+    },
+    {
+      "event_id": "SYN0115",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 240937.01778601497
+    },
+    {
+      "event_id": "SYN0116",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 116036.32392141644
+    },
+    {
+      "event_id": "SYN0117",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 592895.1979049424
+    },
+    {
+      "event_id": "SYN0118",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 96715.96549377961
+    },
+    {
+      "event_id": "SYN0119",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 902906.4779780234
+    },
+    {
+      "event_id": "SYN0120",
+      "anomaly_type": "gain_jump",
+      "passed": true,
+      "min_rms_delta": 572978.6017996954
+    },
+    {
+      "event_id": "SYN0121",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 116193.98181078851
+    },
+    {
+      "event_id": "SYN0122",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 64066.94785752195
+    },
+    {
+      "event_id": "SYN0123",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 283524.7591373863
+    },
+    {
+      "event_id": "SYN0124",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 52430.591310951066
+    },
+    {
+      "event_id": "SYN0125",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 96861.07083575292
+    },
+    {
+      "event_id": "SYN0126",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 97486.83856121311
+    },
+    {
+      "event_id": "SYN0127",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 432959.2718773051
+    },
+    {
+      "event_id": "SYN0128",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 32444.261349754306
+    },
+    {
+      "event_id": "SYN0129",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 44200.868288287464
+    },
+    {
+      "event_id": "SYN0130",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 82451.09284485412
+    },
+    {
+      "event_id": "SYN0131",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 73186.81263102192
+    },
+    {
+      "event_id": "SYN0132",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 96037.92938637345
+    },
+    {
+      "event_id": "SYN0133",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 76475.78199239293
+    },
+    {
+      "event_id": "SYN0134",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 182168.0814678044
+    },
+    {
+      "event_id": "SYN0135",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 237693.03702443663
+    },
+    {
+      "event_id": "SYN0136",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 689310.6690824697
+    },
+    {
+      "event_id": "SYN0137",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 320240.18837469106
+    },
+    {
+      "event_id": "SYN0138",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 311635.4755632118
+    },
+    {
+      "event_id": "SYN0139",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 127860.08175946887
+    },
+    {
+      "event_id": "SYN0140",
+      "anomaly_type": "high_frequency_jitter",
+      "passed": true,
+      "min_rms_delta": 222600.00429775994
+    },
+    {
+      "event_id": "SYN0141",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 3.668754608000256,
+      "min_spectral_flatness": 0.5478316293338911
+    },
+    {
+      "event_id": "SYN0142",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 3.4918705474801444,
+      "min_spectral_flatness": 0.5479472413397132
+    },
+    {
+      "event_id": "SYN0143",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 2.6023328764723903,
+      "min_spectral_flatness": 0.5504384046640924
+    },
+    {
+      "event_id": "SYN0144",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 3.121696647475753,
+      "min_spectral_flatness": 0.6145345665961646
+    },
+    {
+      "event_id": "SYN0145",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 3.2582613172598713,
+      "min_spectral_flatness": 0.5256243506006754
+    },
+    {
+      "event_id": "SYN0146",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 3.639707073766152,
+      "min_spectral_flatness": 0.6202285643980874
+    },
+    {
+      "event_id": "SYN0147",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 2.6323515209210147,
+      "min_spectral_flatness": 0.5134422275138198
+    },
+    {
+      "event_id": "SYN0148",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 2.4513416576618727,
+      "min_spectral_flatness": 0.5777076750391488
+    },
+    {
+      "event_id": "SYN0149",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 2.699338469299191,
+      "min_spectral_flatness": 0.5524607613100696
+    },
+    {
+      "event_id": "SYN0150",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 2.147039782464563,
+      "min_spectral_flatness": 0.5670236395015004
+    },
+    {
+      "event_id": "SYN0151",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 3.3064520198404694,
+      "min_spectral_flatness": 0.5923276918885074
+    },
+    {
+      "event_id": "SYN0152",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 2.5317179541623727,
+      "min_spectral_flatness": 0.5590052408598507
+    },
+    {
+      "event_id": "SYN0153",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 2.669808851593202,
+      "min_spectral_flatness": 0.577038811967899
+    },
+    {
+      "event_id": "SYN0154",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 3.7215623774641964,
+      "min_spectral_flatness": 0.5286008759161803
+    },
+    {
+      "event_id": "SYN0155",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 3.739540387888204,
+      "min_spectral_flatness": 0.5459319904630189
+    },
+    {
+      "event_id": "SYN0156",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 2.2739446082442365,
+      "min_spectral_flatness": 0.5569285877781847
+    },
+    {
+      "event_id": "SYN0157",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 3.514341255742673,
+      "min_spectral_flatness": 0.5501054343875759
+    },
+    {
+      "event_id": "SYN0158",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 3.755433990036047,
+      "min_spectral_flatness": 0.5999268179243985
+    },
+    {
+      "event_id": "SYN0159",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 3.8652415214548377,
+      "min_spectral_flatness": 0.5691341628194341
+    },
+    {
+      "event_id": "SYN0160",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 3.544627090567462,
+      "min_spectral_flatness": 0.5544602728027475
+    },
+    {
+      "event_id": "SYN0161",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 2.259983966082241,
+      "min_spectral_flatness": 0.5233468980622459
+    },
+    {
+      "event_id": "SYN0162",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 3.215928622851543,
+      "min_spectral_flatness": 0.55154887565536
+    },
+    {
+      "event_id": "SYN0163",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 3.9954114031736045,
+      "min_spectral_flatness": 0.540981854582553
+    },
+    {
+      "event_id": "SYN0164",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 2.8970236598356283,
+      "min_spectral_flatness": 0.4435226865222028
+    },
+    {
+      "event_id": "SYN0165",
+      "anomaly_type": "strong_noise",
+      "passed": true,
+      "min_noise_to_background_rms_ratio": 3.821532049023197,
+      "min_spectral_flatness": 0.56354901403591
+    }
+  ]
+}

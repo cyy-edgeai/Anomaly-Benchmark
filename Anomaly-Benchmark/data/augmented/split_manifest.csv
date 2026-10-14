@@ -1,0 +1,6 @@
+﻿split,start_sample,end_sample_inclusive,end_sample_exclusive,start_time_s,end_time_s_exclusive,sample_count,fraction_of_record,synthetic_injection_enabled,recommended_use
+train,0,31999,32000,0.0,320.0,32000,0.5333333333333333,True,training_background; synthetic labels optional
+buffer_1,32000,36095,36096,320.0,360.96,4096,0.06826666666666667,False,temporal leakage guard; exclude from fitting and evaluation
+calibration,36096,44191,44192,360.96,441.92,8096,0.13493333333333332,True,threshold calibration and model selection
+buffer_2,44192,48287,48288,441.92,482.88,4096,0.06826666666666667,False,temporal leakage guard; exclude from fitting and evaluation
+test,48288,59999,60000,482.88,600.0,11712,0.1952,True,final evaluation only

@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Exact standalone configuration for the paper experiment's training augmentation; this is separate from the frozen benchmark injection configuration.",
+  "randomness": {
+    "default_seed": 20260520,
+    "python_stream": "Python random: background parameters and all online event decisions",
+    "torch_stream": "PyTorch RNG: base Gaussian noise and event-local random tensors",
+    "replay_rule": "Call seed_all(default_seed) before online augmentation. Preserve anomaly_types order and call order. For background augmentation, use random.Random(default_seed) or pass the caller-owned stream."
+  },
+  "background_augmentation": {
+    "input_layout": "trace_major_[trace,time]",
+    "operation_order": [
+      "integer_time_shift_with_edge_replication",
+      "amplitude_scale",
+      "zero_mean_gaussian_noise",
+      "robust_cross_trace_cleanup"
+    ],
+    "time_shift_samples": [-4, 4],
+    "amplitude_scale": [0.9, 1.1],
+    "gaussian_noise": {
+      "mean": 0.0,
+      "std_range": [0.01, 0.05]
+    },
+    "robust_cross_trace_cleanup": {
+      "enabled": true,
+      "radius": 4,
+      "residual_clip": 0.25,
+      "passes": 4,
+      "minimum_scale": 0.05
+    },
+    "storage_dtype": "float32"
+  },
+  "online_self_supervised": {
+    "input_layout": "batch_major_[batch,time]",
+    "window_samples": 512,
+    "window_stride_samples": 64,
+    "maximum_training_windows": 12000,
+    "minimum_window_samples": 16,
+    "augmentation_probability": 0.96,
+    "events_per_window": [2, 7],
+    "position_bins_per_event": 2,
+    "event_position_fraction": [0.05, 0.96],
+    "base_gaussian_noise_std": 0.012,
+    "anomaly_types": [
+      "pulse",
+      "burst",
+      "step",
+      "flatline",
+      "drift",
+      "dropout",
+      "jitter",
+      "clipping",
+      "gain_jump",
+      "strong_noise"
+    ],
+    "anomaly_parameters": {
+      "pulse": {
+        "length_samples": [1, 6],
+        "amplitude_abs": [3.0, 7.0],
+        "random_sign": true,
+        "transform": "add_constant"
+      },
+      "burst": {
+        "length_samples": [8, 34],
+        "amplitude_abs": [2.0, 5.0],
+        "random_sign": true,
+        "noise_std_amplitude_fraction": 0.18,
+        "transform": "add_offset_and_local_gaussian_noise"
+      },
+      "step": {
+        "length_samples": [28, 100],
+        "amplitude_abs": [2.0, 5.0],
+        "random_sign": true,
+        "transform": "add_constant"
+      },
+      "flatline": {
+        "length_samples": [24, 90],
+        "amplitude_abs": [2.0, 4.0],
+        "random_sign": true,
+        "jitter_std_floor": 0.008,
+        "jitter_std_amplitude_fraction": 0.035,
+        "transform": "previous_sample_plus_offset_and_small_noise"
+      },
+      "drift": {
+        "length_samples": [42, 140],
+        "amplitude_abs": [2.0, 5.0],
+        "random_sign": true,
+        "ramp": [0.25, 1.0],
+        "transform": "add_linear_ramp"
+      },
+      "dropout": {
+        "length_samples": [16, 70],
+        "jitter_std": 0.01,
+        "transform": "replace_with_near_zero_noise"
+      },
+      "jitter": {
+        "length_samples": [12, 56],
+        "amplitude": [2.0, 5.0],
+        "transform": "add_high_amplitude_gaussian_noise"
+      },
+      "clipping": {
+        "length_samples": [42, 120],
+        "amplitude": [0.35, 0.75],
+        "transform": "clip_around_segment_median"
+      },
+      "gain_jump": {
+        "length_samples": [36, 110],
+        "amplitude": [1.8, 3.2],
+        "amplification_probability": 0.72,
+        "attenuation_gain": [0.18, 0.55],
+        "transform": "multiply_segment"
+      },
+      "strong_noise": {
+        "length_samples": [50, 160],
+        "amplitude": [2.0, 4.5],
+        "previous_sample_weight": 0.55,
+        "current_sample_weight": 0.45,
+        "transform": "add_one_step_correlated_gaussian_noise"
+      }
+    },
+    "mask_semantics": {
+      "0": "unmodified by an online anomaly event; base Gaussian noise may still be present",
+      "1": "inside a procedurally generated online anomaly interval"
+    }
+  },
+  "separation_from_frozen_benchmark": "This file controls training-only augmentation. injection/anomaly_config.json controls the released GEIWSR-III frozen anomaly-injected benchmark and uses seed 20260913."
+}
