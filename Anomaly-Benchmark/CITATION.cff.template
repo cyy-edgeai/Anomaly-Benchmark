@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this dataset or code, please cite the dataset and associated paper."
+type: dataset
+title: "GEIWSR-III: Seismic Waveform Anomaly Benchmark"
+version: 1.0.0
+date-released: 2026-10-12
+authors:
+  - family-names: "TODO"
+    given-names: "TODO"
+    orcid: "https://orcid.org/TODO"
+repository-code: "https://github.com/TODO/Seismic-Waveform-Anomaly-Benchmark"
+url: "https://github.com/TODO/Seismic-Waveform-Anomaly-Benchmark"
+license: CC-BY-4.0
+keywords:
+  - seismic waveform
+  - anomaly detection
+  - synthetic anomaly injection
+  - time series
+preferred-citation:
+  type: article
+  title: "TODO: paper title"
+  authors:
+    - family-names: "TODO"
+      given-names: "TODO"
+  journal: "TODO"
+  year: 2026
+  doi: "TODO"
