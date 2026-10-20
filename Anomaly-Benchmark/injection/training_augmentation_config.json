@@ -34,7 +34,7 @@
     "input_layout": "batch_major_[batch,time]",
     "window_samples": 512,
     "window_stride_samples": 64,
-    "maximum_training_windows": 12000,
+    "maximum_training_windows": 800,
     "minimum_window_samples": 16,
     "augmentation_probability": 0.96,
     "events_per_window": [2, 7],
@@ -43,15 +43,9 @@
     "base_gaussian_noise_std": 0.012,
     "anomaly_types": [
       "pulse",
-      "burst",
-      "step",
       "flatline",
       "drift",
-      "dropout",
-      "jitter",
-      "clipping",
-      "gain_jump",
-      "strong_noise"
+      "jitter"
     ],
     "anomaly_parameters": {
       "pulse": {
