@@ -1,7 +1,5 @@
 # Seismic Waveform Anomaly Benchmark
 
-[中文说明](README_zh-CN.md) · [Dataset card](DATASET_CARD.md) · [Injection method](INJECTION_METHOD.md) · [Reproducibility](REPRODUCIBILITY.md)
-
 This repository is a focused data release containing only the original seismic waveform dataset, final natural-anomaly labels, deterministic anomaly-injection code and configuration, the injected dataset and labels, two visualization figures, exact split indices, and documentation. 
 
 ## Contents
@@ -18,7 +16,6 @@ injection/                                 benchmark injection and training-augm
 
 - Shape: 60,000 samples × 200 traces.
 - Sampling rate: 100 Hz; duration: 600 s.
-- Original SHA-256: `bd807a59ff60d307b2a94801ab15d9f97f7ff9d40ceceb184e6feb897998fdc7`.
 - Natural anomalies: 35 final intervals and 375 labeled points.
 
 The final natural-anomaly labels were manually reviewed by two domain experts. Candidate generation could assist inspection, but automatic candidates were not treated as ground truth. Experts used the target trace, adjacent traces, waveform morphology, and time–distance coherence; coherent physical seismic arrivals were retained as background. The public package contains the final consensus labels rather than expert identities.
@@ -84,5 +81,3 @@ Do not write regenerated files over the frozen `data/augmented/` release. See `R
 - `0`: background/no published anomaly label.
 - `1`: natural data-quality anomaly in the two-expert final consensus labels.
 - `2–9`: deterministic synthetic procedural ground truth.
-
-A zero synthetic label means “not injected”; it does not prove that no unknown natural anomaly exists.
