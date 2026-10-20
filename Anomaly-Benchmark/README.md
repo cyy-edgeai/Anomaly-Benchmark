@@ -2,7 +2,7 @@
 
 [中文说明](README_zh-CN.md) · [Dataset card](DATASET_CARD.md) · [Injection method](INJECTION_METHOD.md) · [Reproducibility](REPRODUCIBILITY.md)
 
-This repository is a focused data release containing only the original seismic waveform dataset, final natural-anomaly labels, deterministic anomaly-injection code and configuration, the injected dataset and labels, two visualization figures, exact split indices, and documentation. Model code, checkpoints, performance tables, and model-result figures are intentionally excluded.
+This repository is a focused data release containing only the original seismic waveform dataset, final natural-anomaly labels, deterministic anomaly-injection code and configuration, the injected dataset and labels, two visualization figures, exact split indices, and documentation. 
 
 ## Contents
 
@@ -38,7 +38,7 @@ The generator uses seed `20260913` and injects step, zero dropout, flatline, dri
 `injection/training_augmentation.py` is a model-free extraction of the augmentation actually used by the experiment program. Its corresponding parameters are frozen in `injection/training_augmentation_config.json`. The implementation preserves both stages and their original order:
 
 1. Trace-major background augmentation: integer time shift in `[-4, 4]` samples with edge replication, amplitude scale in `[0.90, 1.10]`, zero-mean Gaussian noise with standard deviation sampled from `[0.01, 0.05]`, followed by four-pass robust cross-trace cleanup.
-2. Online self-supervision on `[batch, time]` windows: base Gaussian noise with standard deviation `0.012`, then 2–7 procedurally generated events with probability `0.96`. The enabled types are pulse, burst, step, flatline, drift, dropout, jitter, clipping, gain jump, and strong noise.
+2. Online self-supervision on `[batch, time]` windows: base Gaussian noise with standard deviation `0.012`, then 2–7 procedurally generated events with probability `0.96`. The enabled types are pulse,flatline,drift,jitter.
 
 This training-only configuration uses seed `20260520` and is intentionally separate from `injection/anomaly_config.json`, which controls the frozen released benchmark and uses seed `20260913`. Event decisions use Python's `random` stream; random tensors use the PyTorch stream. Both must be seeded for exact replay.
 
