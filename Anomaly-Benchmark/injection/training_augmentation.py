@@ -38,15 +38,9 @@ EPS = 1.0e-9
 DEFAULT_CONFIG_PATH = Path(__file__).with_name("training_augmentation_config.json")
 ALL_PROXY_ANOMALY_TYPES = (
     "pulse",
-    "burst",
-    "step",
     "flatline",
     "drift",
-    "dropout",
     "jitter",
-    "clipping",
-    "gain_jump",
-    "strong_noise",
 )
 
 
