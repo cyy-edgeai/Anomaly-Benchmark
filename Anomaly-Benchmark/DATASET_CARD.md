@@ -13,7 +13,6 @@ It is not a geophysical event catalog. Natural and synthetic results must be rep
 | Shape | 60,000 samples × 200 traces |
 | Sampling rate | 100 Hz |
 | Duration | 600 seconds |
-| Source SHA-256 | `bd807a59ff60d307b2a94801ab15d9f97f7ff9d40ceceb184e6feb897998fdc7` |
 
 ## Labels
 
