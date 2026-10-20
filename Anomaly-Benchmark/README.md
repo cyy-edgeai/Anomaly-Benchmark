@@ -18,7 +18,7 @@ injection/                                 benchmark injection and training-augm
 - Sampling rate: 100 Hz; duration: 600 s.
 - Natural anomalies: 35 final intervals and 375 labeled points.
 
-The final natural-anomaly labels were manually reviewed by two domain experts. Candidate generation could assist inspection, but automatic candidates were not treated as ground truth. Experts used the target trace, adjacent traces, waveform morphology, and time–distance coherence; coherent physical seismic arrivals were retained as background. The public package contains the final consensus labels rather than expert identities.
+The final natural-anomaly labels were manually reviewed by two domain experts. Candidate generation could assist inspection, but automatic candidates were not treated as ground truth. Experts used the target trace, adjacent traces, waveform morphology, and time–distance coherence; coherent physical seismic arrivals were retained as background.
 
 ![Final natural anomaly labels](data/natural_labels/final_label_overview.png)
 
