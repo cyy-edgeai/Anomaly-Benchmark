@@ -38,11 +38,4 @@ Frozen counts: 35 reviewed natural intervals/375 natural points, 165 synthetic e
 - NumPy array columns are zero-based.
 - Sample indices are zero-based.
 - Split intervals use `[start, end)`.
-- Natural labels and injected labels are disjoint.
-
-## Limitations
-
-- The 100 Hz sampling rate should be confirmed against acquisition metadata because the source CSV is headerless.
-- Synthetic transformations do not represent every possible real-world fault.
-- Synthetic F1 must not be interpreted as real deployment precision.
-- A zero label is not proof that an unknown natural anomaly is absent.
+- Natural labels and injected labels are disjoi
